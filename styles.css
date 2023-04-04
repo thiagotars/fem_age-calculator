@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+:root {
+    --font-base: 'Poppins', sans-serif;
+    
+    --color-offWhite: #f0f0f0;
+    --color-lightGrey: #dbdbdb;
+    --color-smokeyGrey: #716f6f;
+    --color-offBlack: #141414;
+    --color-white: #141414;
+    --color-purple: #854dff;
+    --color-lightRed: #ff5757;
+}
+  
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-offWhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    max-width: 840px;
+    padding: 60px 55px;
+    border-radius: 25px;
+    border-bottom-right-radius: 200px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+label {
+    font-size: 14px;
+    font-family: var(--font-base);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-smokeyGrey);
+}
+
+.font-red {
+    color: var(--color-lightRed);
+    transition: .3s;
+}
+
+.border-red {
+    border: 1px solid var(--color-lightRed);
+    transition: .3s;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+    gap: 7px;
+}
+
+input {
+    font-size: 32px;
+    padding: 10px 20px;
+    border: 1px solid var(--color-lightGrey);
+    font-family: var(--font-base);
+    font-weight: 800;
+    outline: none;
+    border-radius: 10px;
+}
+
+input:focus {
+    border: 1px solid var(--color-purple);
+    transition: .3s;
+}
+
+::placeholder {
+    color: var(--color-lightGrey);
+}
+
+.input-container p {
+    color: var(--color-lightRed);
+    font-family: var(--font-base);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.divider-container {
+    position: relative;
+}
+
+.divider {
+    border-top: 1px solid var(--color-lightGrey);
+}
+
+button {
+    width: 95px;
+    height: 95px;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-0%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    background-color: var(--color-purple);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-offBlack);
+    transition: .25s;
+}
+
+.result-container {
+    margin-top: 50px;
+}
+
+.result-container h1 {
+    font-size: 100px;
+    font-family: var(--font-base);
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1;
+}
+
+.result-container span {
+    font-size: 100px;
+    font-family: var(--font-base);
+    font-weight: 800;
+    font-style: italic;
+    color: var(--color-purple);
+    margin-right: 10px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    main {
+        padding: 48px 40px;
+        border-radius: 20px;
+        border-bottom-right-radius: 150px;
+    }
+
+    .input-container {
+        max-width: 128px;
+        gap: 5px;
+    }
+    
+
+    input {
+        font-size: 24px;
+        padding: 8px 16px;
+    }
+
+    button {
+        width: 75px;
+        height: 75px;
+    }
+    .result-container {
+        margin-top: 50px;
+    }
+    
+    .result-container h1 {
+        font-size: 80px;
+    }
+    
+    .result-container span {
+        font-size: 80px;
+        margin-right: 8px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    main {
+        padding: 36px 24px;
+        border-bottom-right-radius: 100px;
+    }
+
+    form {
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 50px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .input-container {
+        max-width: 108px;
+    }
+    
+
+    input {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .result-container h1 {
+        font-size: 54px;
+    }
+    
+    .result-container span {
+        font-size: 54px;
+    }
+
+    button img {
+        width: 40px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    form {
+        gap: 16px;
+    }
+
+    .input-container {
+        max-width: 80px;
+    }
+
+    .input-container p {
+        font-size: 12px;
+    }
+    
+    .result-container h1 {
+        font-size: 40px;
+    }
+    
+    .result-container span {
+        font-size: 40px;
+        margin-right: 8px;
+    }
+
+    button img {
+        width: 36px;
+    }
+}
